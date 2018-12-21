@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>比价分类导航</title>
+    <!-- 1.引入mui样式文件 -->
+    <link rel="stylesheet" type="text/css" href="lib/mui/css/mui.css">
+    <!-- 2.引入字体样式 -->
+    <link rel="stylesheet" type="text/css" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 3.引入本页的样式 -->
+    <link rel="stylesheet/less" href="less/category.less">
+    <!-- 4.引入less编译文件 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="logo">
+            <a href="#">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="app">
+            <a href="#">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 搜索区域 -->
+    <section id="search">
+        <input type="search" placeholder="请输入你想比较的商品">
+        <button type="button">搜索</button>
+    </section>
+
+    <!-- 主体区域 -->
+    <main id="main">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">
+                <a href="#">大家电</a>
+                
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="#">手机数码</a>
+                
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="#">电脑办公</a>
+                
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="#">生活家电</a>
+                
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="#">厨卫家电</a>
+                
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="#">个人护理</a>
+                
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="#">健康电器</a>
+                
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="#">正品鞋</a>
+                
+            </li>
+        </ul>
+    </main>
+    <!-- 品牌区域 -->
+    <section id="brand">
+        <span>品牌排行</span>
+        <i class="fa fa-arrow-circle-right" ></i>
+    </section>
+    <!-- 尾部区域 -->
+    <footer id="footer">
+        <div class="footer-up">
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+            <a href="index.html">首页</a>
+        </div>
+        <div class="footer-down">
+            <p>
+                <a href="#" class="appdown">手机APP下载</a>
+                <a href="#">慢慢买手机版 -- 掌上比价平台</a>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 5.引入mui文件 -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 6.引入zepto文件 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 7.引入模板页文件 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 8.引入本页的js文件 -->
+    <script src="js/category.js"></script>
+</body>
+
+</html>
