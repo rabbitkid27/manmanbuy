@@ -1,6 +1,12 @@
 html {
   font-size: 100px;
 }
+body {
+  padding-top: 100px;
+}
+ul {
+  list-style: none;
+}
 #header {
   position: fixed;
   top: 0;
@@ -57,17 +63,32 @@ html {
   border-radius: .15rem;
   padding-top: .04rem;
 }
-#main {
-  margin-top: 1rem;
+#category ul li > a {
+  height: .4rem;
+  display: block;
+  color: #000;
+  font-weight: 800;
+  font-size: .15rem;
+  text-decoration: none;
 }
-#main ul li {
-  display: flex;
-  justify-content: space-between;
-  background-color: #e5e5e5;
+#category ul li div {
+  padding-top: 0 ;
 }
-#main ul li a {
-  font-weight: bold;
-  font-size: 15px;
+#category ul li div .row > div {
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+  line-height: .4rem;
+}
+#category ul li div .row > div a {
+  height: .4rem;
+  display: block;
+  color: #000;
+  font-size: .14rem;
+  text-align: center;
+  line-height: .4rem;
+  text-decoration: none;
 }
 #brand {
   margin-top: .1rem;

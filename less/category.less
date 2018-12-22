@@ -3,6 +3,15 @@ html {
     font-size: 100px;
 }
 
+body {
+    padding-top: 100px;
+}
+
+// 去掉li标签的小圆点
+ul {
+    list-style: none;
+}
+
 // 分类搜索各自样式
 // 头部区域
 #header {
@@ -64,17 +73,38 @@ html {
     }
 }
 
-// 主体区域
-#main {
-    margin-top: 1rem; // height: 6rem;
+// 分类主体区域
+#category {
     ul {
         li {
-            display: flex;
-            justify-content: space-between;
-            background-color: #e5e5e5;
-            a {
-                font-weight: bold;
-                font-size: 15px;
+            >a {
+                height: .4rem;
+                display: block;
+                color: #000;
+                font-weight: 800;
+                font-size: .15rem;
+                text-decoration: none;
+            }
+            div {
+                padding-top: 0 ;
+                .row {
+                    >div {
+                        height: 40px;
+                        border-bottom: 1px solid #ccc;
+                        border-right: 1px solid #ccc;
+                        box-sizing: border-box;
+                        line-height: .4rem;
+                        a {
+                            height: .4rem;
+                            display: block;
+                            color: #000;
+                            font-size: .14rem;
+                            text-align: center;
+                            line-height: .4rem;
+                            text-decoration: none;
+                        }
+                    }
+                }
             }
         }
     }
@@ -125,22 +155,19 @@ html {
     .footer-down {
         height: .62rem;
         background-color: #232a34;
-        
         padding-top: .1rem;
-        
         p {
             text-align: center;
             margin-bottom: 0;
             font-size: .12rem;
             a {
-                
                 color: #bebebe;
                 &.appdown {
                     color: #ff4e49;
                 }
             }
         }
-        &:nth-of-type{
+        &:nth-of-type {
             color: #727272;
         }
     }
