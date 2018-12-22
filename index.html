@@ -72,6 +72,8 @@
                         </ul>
                     </div>
 
+           
+
                 </section>
 
                 <!-- 超值折扣和推荐 -->
@@ -162,7 +164,7 @@
         {{each result value index}}  
        
          <li class='li{{index}}'>
-             <a href="#">
+             <a href="{{value.titlehref=='more.html'?'#':value.titlehref}}">
                  {{@value.img}}
                  <p>{{value.name}}</p>
              </a>

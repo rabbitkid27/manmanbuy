@@ -13,15 +13,19 @@ $(function () {
     });
 
     /* 点击更多显示更多菜单 */
+    var abClock = true;
     $('.menubar-top ul').on('tap', '.li7', function () {
-
-        var ab = document.querySelector('.menubar-top')
-        if (ab.style.overflow == "hidden") {
-            ab.style.overflow = 'visible';
-            $('#menubar').css('height', "3rem")
+        
+        var ab = document.querySelector('.menubar-top');
+        if (abClock) {
+            // ab.style.overflow = 'visible';
+            $('.menubar-top').css('overflow','visible')
+            $('#menubar').css('height', "3rem");
+            abClock = !abClock;
         } else {
             ab.style.overflow = 'hidden';
-            $('#menubar').css('height', "2rem")
+            $('#menubar').css('height', "2rem");
+            abClock = !abClock;
         }
 
     })
@@ -45,7 +49,7 @@ $(function () {
     mui('.mui-slider').slider({
         interval: 1000 //自动轮播周期，若为0则不自动播放，默认为0；
     });
-    
+
     /*  滚动区域初始化 */
     mui('.mui-scroll-wrapper').scroll({
         deceleration: 0.0005, //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
