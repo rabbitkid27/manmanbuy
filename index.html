@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>主页</title>
+    <link rel="stylesheet" type="text/css" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" type="text/css" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="less/index.less">
+    <script src="lib/less/less.js"></script>
+    <script src="./js/rem.js"></script>
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header id="header">
+
+        <a href="index.html" class="logo">
+            <img src="./images/header_logo.png" alt="">
+        </a>
+        <a href="https://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia" class="app-download">
+            <img src="./images/header_app.png" alt="">
+            </i>
+        </a>
+        <!-- 搜索框-->
+        <section id="nav-search">
+            <input type="text" placeholder="请输入要搜索的商品">
+            <button type="button" class="mui-btn mui-btn-primary">搜索</button>
+        </section>
+    </header>
+
+    <!-- 首页内容 -->
+    <main id="main">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+
+                <!-- 轮播图 -->
+                <section id="banner">
+                    <!-- mui轮播图 -->
+                    <div class="mui-slider ">
+                        <div class="mui-slider-group mui-slider-loop">
+                            <!--支持循环，需要重复图片节点-->
+                            <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner04.jpg" /></a></div>
+                            <div class="mui-slider-item"><a href="#"><img src="./images/banner01.jpg" /></a></div>
+                            <div class="mui-slider-item"><a href="#"><img src="./images/banner02.jpg" /></a></div>
+                            <div class="mui-slider-item"><a href="#"><img src="./images/banner03.jpg" /></a></div>
+                            <div class="mui-slider-item"><a href="#"><img src="./images/banner04.jpg" /></a></div>
+                            <!--支持循环，需要重复图片节点-->
+                            <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner01.jpg" /></a></div>
+                        </div>
+                        <div class="mui-slider-indicator">
+                            <div class="mui-indicator mui-active"></div>
+                            <div class="mui-indicator"></div>
+                            <div class="mui-indicator"></div>
+                            <div class="mui-indicator"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 菜单栏 -->
+                <section id="menubar">
+                    <div class="menubar-top">
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="./images/ic_search.png" alt="">
+                                    <p>比价搜索</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </section>
+
+                <!-- 超值折扣和推荐 -->
+                <section id="shop">
+                    <!-- 标题 -->
+                    <div class="shop-title">
+                        <span>超值折扣和推荐</span>
+                        <i class="fa fa-fighter-jet" aria-hidden="true"></i>
+                    </div>
+
+                    <!-- 内容 -->
+                    <div class="shop-content">
+                        <ul class="mui-table-view">
+
+                            <li class="mui-table-view-cell mui-media">
+                                <a href="javascript:;">
+                                    <div class="my-img">
+                                        <img class="mui-media-object mui-pull-left" src="./images/ic_bcj.png">
+                                    </div>
+                                    <div class="mui-media-body mymui-body">
+                                        <i class="my-span">
+                                            商品积分多看范德萨九分裤fdsafdasfdsafdsafdsafdsafdsa撒了防静电啦
+                                        </i><span>
+                                            九分裤代理商19元
+                                        </span>
+                                        <p class='mui-ellipsis'>29块包邮|12-21 16:59</p>
+                                        <!-- 字体图标 -->
+                                        <i class="fa fa-commenting-o mui-pull-right" aria-hidden="true">15</i>
+                                    </div>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 更多优惠按钮 -->
+                <section id="moreDiscounts">
+                    <button type="button" class="mui-btn">
+                        更多优惠信息
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    </button>
+                </section>
+
+                <!-- 品牌排行 -->
+                <section id="trademark">
+                    <div class="shop-title">
+                        <span>品牌排行</span>
+                        <i class="fa fa-fighter-jet" aria-hidden="true"></i>
+                    </div>
+                </section>
+
+
+
+                <!-- 页脚 -->
+                <footer id="footer">
+                    <div class="my-btn">
+                        <a href="javascript:;">登录</a>
+                        <a href="javascript:;">注册</a>
+                        <a href="javascript:;" class="my-goTop">
+                            <i class="fa fa-angle-double-up " aria-hidden="true"></i>
+                            返回顶部
+                        </a>
+                    </div>
+                    <div class="my-app">
+                        <p>
+                            <a href="javascript:;">
+                                手机APP下载
+                            </a>
+                            <a href="index.htm">
+                                慢慢买手机版 --掌上比价平台
+                            </a>
+                        </p>
+                        <p>m.manmanbuy.com</p>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <!-- 菜单栏调用模板 -->
+    <script id="indexMenubarTpl" type="text/html">
+        {{each result value index}}  
+       
+         <li class='li{{index}}'>
+             <a href="#">
+                 {{@value.img}}
+                 <p>{{value.name}}</p>
+             </a>
+         </li>
+       {{/each}}  
+    </script>
+
+    <!-- 超值折扣和推荐调用模板 -->
+    <script id="indexshopContentTpl" type="text/html">
+        {{each result value}}
+        <li class="mui-table-view-cell mui-media">
+            <a href="javascript:;">
+                <div class="my-img">
+                       {{@value. productImg2}}
+                </div>
+                <div class="mui-media-body mymui-body">
+                     <i class="my-span">
+                            {{value.productName}}
+                     </i>
+                     <span>
+                          {{value.productPinkage}}
+                     </span>
+                    <p class='mui-ellipsis'>{{value.productFrom}}|{{value.productTime}}</p>
+                    <!-- 字体图标 -->
+                    <i class="fa fa-commenting-o mui-pull-right" aria-hidden="true">{{value.productComCount}}</i>
+                </div>
+            </a>
+        </li>
+        {{/each}}  
+        </script>
+
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

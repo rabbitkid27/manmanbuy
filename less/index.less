@@ -1,0 +1,240 @@
+/* 公共颜色 */
+
+@main-color: #fe4e49;
+@font-color: #fe971d;
+@footer-color: #222933;
+/* 公共样式 */
+
+body{
+	// position: relative; //
+	 height: 100vh;
+	padding-top: .9rem;
+	padding-bottom: 0rem;
+    background-color: #ccc;
+}
+
+li {
+    list-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+i {
+    font-style: normal;
+}
+
+// @import 'bese.less';
+#header {
+    z-index: 999;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    height: .45rem;
+    background-color: @main-color;
+    top: 0rem;
+    .logo {
+        flex: 6;
+        display: block;
+        padding: .1rem;
+        img {
+            width: 100%;
+        }
+    }
+    .app-download {
+        flex: 6;
+        text-align: right;
+        display: block;
+        padding: .08rem;
+        img {
+            width: .34rem;
+        }
+    }
+    /* 搜索框 */
+    #nav-search {
+        z-index: 999;
+        position: fixed;
+        top: .45rem;
+        padding: .1rem .1rem .1rem .1rem;
+        display: flex;
+        height: .45rem;
+        width: 100%;
+        background-color: #fe971d;
+        input {
+            flex: 10;
+            height: .3rem;
+            font-size: .12rem;
+            border-radius: .15rem;
+        }
+        button {
+            flex: 2;
+            height: .30rem;
+            margin-left: .1rem;
+            border-radius: .15rem;
+            background-color: #555555;
+            border: none;
+        }
+    }
+}
+
+#main {
+	position: relative;
+	left: 0px;
+    top: 0px;
+	height:100%;
+	overflow: hidden;
+    /* 菜单栏 */
+    #menubar {
+        width: 100vw;
+        background-color: #fff;
+        margin-top: .05rem;
+        height: 2rem;
+        .menubar-top {
+            height: 1.8rem;
+            text-align: center;
+            overflow: hidden;
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    width: 25%;
+                    a {
+                        text-align: center;
+                        display: block;
+                        margin-top: .1rem;
+                        img {
+                            width: .5rem;
+                        }
+                        p {
+                            font-size: 12px;
+                            margin-top: .05rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* 超值折扣和推荐
+			品牌排行*/
+    #shop,
+    #trademark {
+        margin-top: .05rem;
+        .shop-title {
+            padding: 0 .1rem 0 .1rem;
+            height: .35rem;
+            background-color: @main-color;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            span {
+                line-height: .35rem;
+            }
+            i {
+                line-height: .35rem;
+                font-size: 20px;
+            }
+        }
+        .shop-content {
+            >ul {
+                >li {
+                    >a {
+                        display: flex;
+                        justify-content: space-between;
+                        .my-img {
+                            max-width: 1rem;
+                            height: 1rem;
+                            margin-right: .1rem;
+                            img {
+                                max-width: 1rem;
+                                height: 1rem;
+                            }
+                        }
+                        .mymui-body {
+                            .my-span {
+                                font-size: .14rem;
+                                line-height: .25rem;
+                                white-space: normal;
+                                color: #555555;
+                            }
+                            span {
+                                font-size: .14rem;
+                                color: @font-color;
+                            }
+                            p {
+                                font-size: .12rem;
+                                margin-top: .2rem;
+                            }
+                            i {
+                                margin-top: -20px;
+                                margin-right: 15px;
+                                color: #9c9cc0;
+                            }
+                        }
+                    }
+                }
+                .mui-table-view-cell:after {
+                    left: 0;
+                }
+            }
+        }
+    }
+    /* 更多优惠按钮  */
+    #moreDiscounts {
+        padding: 0.1rem .1rem 0 .1rem;
+        background-color: #fff;
+        .mui-btn {
+            width: 100%;
+        }
+	}
+	
+    /* 页脚 */
+    #footer {
+        height: 1.18rem;
+        background-color: @footer-color;
+        margin-top: 20px;
+        width: 100%;
+        .my-btn {
+            display: flex;
+            height: .34rem;
+            a {
+                flex: 1;
+                width: 100%;
+                background-color: @footer-color;
+                color: #fff;
+                box-sizing: border-box;
+                border-right: 1px solid #727272;
+                text-align: center;
+                font-size: 14px;
+                line-height: .34rem
+            }
+        }
+        .my-app {
+            border-top: 1px solid #727272;
+            padding-top: .2rem;
+            p {
+                text-align: center;
+                line-height: .15rem;
+                &:first-child {
+                    a {
+                        font-size: .12rem;
+                        &:first-child {
+                            color: @main-color;
+                        }
+                        &:last-child {
+                            color: #bdbdbd;
+                        }
+                    }
+                }
+                &:last-child {
+                    font-size: .10rem;
+                }
+            }
+        }
+    }
+}
