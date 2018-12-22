@@ -15,16 +15,20 @@ $(function () {
     /* 点击更多显示更多菜单 */
     var abClock = true;
     $('.menubar-top ul').on('tap', '.li7', function () {
-        
+
         var ab = document.querySelector('.menubar-top');
         if (abClock) {
-            // ab.style.overflow = 'visible';
-            $('.menubar-top').css('overflow','visible')
-            $('#menubar').css('height', "3rem");
+          
+            $('.menubar-top').animate({
+                'height': '3rem'
+            })
+
             abClock = !abClock;
         } else {
-            ab.style.overflow = 'hidden';
-            $('#menubar').css('height', "2rem");
+         
+            $('.menubar-top').animate({
+                'height': '1.9rem'
+            })
             abClock = !abClock;
         }
 
@@ -58,7 +62,7 @@ $(function () {
 
     /* 点击返回顶部 */
     $('.my-goTop').on('tap', function () {
-        mui('.mui-scroll-wrapper').scroll().scrollTo(0, 0, 2000); //100毫秒滚动到顶
+        mui('.mui-scroll-wrapper').scroll().scrollTo(0, 0, 1000); //100毫秒滚动到顶
     })
 
 })
