@@ -1,0 +1,237 @@
+
+// 引入公共样式
+@import 'base.less';
+
+// 主体区域
+
+#main{
+    // 导航栏
+    margin-top: .4rem;
+    width: 100vw;
+    position: relative;
+    height: 100%;
+    .nav{
+        height: 0.4rem;
+        width: 100vw;
+        background-color: #fff;
+        .nav-name{
+            height: 0.4rem;
+            .scroll-bar{
+            height: 0.4rem;
+            font-size: .14rem;
+                a.mui-active{
+                    color: @main-color;
+                    border-bottom: 2px solid @main-color;
+                }
+            }
+        }
+        
+        .search-icon{
+            width: .4rem;
+            height: .4rem;
+            background: url(../images/icon_bar.png) -0.1233rem -0.1233rem;
+            background-size: 2.9333rem 1.76rem;
+            position: absolute;
+            z-index: 3;
+            right: 0;
+            background-color: #ccc;
+        }
+    }
+    
+// 搜索框
+    .search-box{
+        width: 100vw;
+        height: .55rem;
+        display: none;
+        .search-bar{
+            height: .55rem;
+            width: 100vw;
+            background-color: #f7f7f7;
+            padding: .1rem .05rem;
+            display: flex;
+            position: absolute;
+            z-index: 3;
+            input{
+                text-align: left;
+                padding-left: .3rem;
+                border-top-right-radius: 0; 
+                border-bottom-right-radius: 0;
+                font-size: 12px;
+            }
+            .input-search-icon{
+                width: .20rem;
+                height: .20rem;
+                position: absolute;
+                background: url(../images/icon_bar.png) -0.64rem -0.04rem;
+                background-size: 2.9333rem 1.76rem;
+                top: .17rem;
+                left: 0.12rem;
+            }
+            .del{
+                width: .17rem;
+                height: .17rem;
+                position: absolute;
+                background: url(../images/icon_bar.png) -2.4133rem -0.2133rem;
+                background-size: 2.9333rem 1.76rem;
+                top: .19rem;
+                right: .55rem;
+            }
+            span{
+                width: .45rem;
+                height: .35rem;
+                line-height: .35rem;
+                text-align: center;
+                font-size: .16rem;
+                background-color: @main-color;
+                color: #fff;
+                border-top-right-radius: .06rem; 
+                border-bottom-right-radius: .06rem;
+            }
+        }
+    }
+
+    // 商品内容区域
+    .product{
+        padding: 0 .05rem;
+    
+        .content{
+            width: 100%;
+            li{
+                width: 100%;
+                height: 1.45rem;
+                background-color: #fff;
+                position: relative;
+                margin: .05rem 0;
+                border: .01rem solid #ccc;
+                .all{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+                .pic{
+                width: 1.35rem;
+                height: 1.35rem;
+                position: absolute;
+                left: 0.05rem;
+                top: 0.05rem;
+                img{
+                    width: 100%;
+                }
+                
+            }
+                .title{
+                position: absolute;
+                width: 2.14rem;
+                left: 1.52rem;
+                top: .05rem;
+                color: #000;
+                }
+                .price{
+                position: absolute;
+                width: 2.14rem;
+                left: 1.52rem;
+                top: .47rem;
+                color: @main-color;
+                i,del{
+                    font-size: 12px;
+                }
+                i,em{
+                    font-style: normal;
+                }
+                del{
+                    color: #ccc
+                }
+                em{
+                    font-size: 16px;
+                }
+                }
+                .clearfix{
+                position: absolute;
+                height: .21rem;
+                width: 2.14rem;
+                left: 1.52rem;
+                top: .75rem;
+                color: #000;
+                font-size: .12rem;
+                a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top:0;
+                    z-index: 4;
+                }
+                i{
+                    display: inline-block;
+                    width: .82rem;
+                    height: .14rem;
+                    background-color: #ffb7b7;
+                    border-radius: .07rem;
+                    position: absolute;
+                    top: .03rem;
+                    overflow: hidden;
+                    em{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: .14rem;
+                        background-color: @main-color;
+                        border-radius: .07rem;
+                    }
+                    span{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        line-height: .14rem;
+                    }
+                }
+                        b{
+                    position: absolute;
+                    left: .92rem;
+                    }
+                }
+                .buy-link{
+                position: absolute;
+                width: 2.14rem;
+                height: .28rem;
+                left: 1.52rem;
+                top: 1.10rem;
+                font-size: 12px;
+                color: #fff;
+                a{
+                    display: inline-block;
+                    width: .58rem;
+                    height: .28rem;
+                    background-color: @main-color;
+                    border-radius: .04rem;
+                    text-align: center;
+                    line-height: .28rem;
+                    position: absolute;
+                    right: .1rem;
+                }
+                }
+            }
+        .receive{
+            position: absolute;
+            z-index: 4;
+            width: 1.1rem;
+            height: .26rem;
+            font-size: .12rem;
+            border: .01rem dotted @main-color;
+            left: 1.52rem;
+            top: 1.12rem;
+            text-align: center;
+            line-height: .26rem;
+            a{
+                display: block;
+                color: @main-color;
+            }
+            }
+        }
+    }
+}

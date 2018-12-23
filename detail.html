@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情页</title>
+
+    <!-- 引入字体文件 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入MUI的css文件 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入自己写的样式文件 -->
+    <link rel="stylesheet/less" href="less/detail.less">
+    <!-- 引入less编译器 -->
+    <script src='lib/less/less.js'></script>
+    <!-- 引入自适应的rem.js 文件 -->
+    <script src='js/rem.js'></script>
+
+</head>
+
+<body>
+
+    <!-- 头部区域样式 -->
+    <header id='header'>
+        <a href="index.html" class="logo" title='慢慢买'>
+            <img src="images/header_logo.png" alt="">
+        </a>
+        <a href="#" class="appdown">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </header>
+    <!-- 搜索区域 -->
+    <div id="search">
+        <form action="#">
+            <input type="search" class='input-search' placeholder='请输入你想比价的商品'>
+            <button type='button' class='btn-search'>搜索</button>
+        </form>
+    </div>
+
+    <!-- 导航区 -->
+    <nav id="nav">
+        <div class='nav-link'>
+            <a href="index.html">首页 ></a>
+            <a href="javascript:;"><span>电视</span> ></a>
+            <a href="javascript:;" class='active'><span>小米</span> ></a>
+        </div>
+        <button type="button" class="mui-btn btn-priceSort">价格</button>
+    </nav>
+
+    <!-- 主体区域 -->
+    <main id="main" >
+
+        <!-- 区域滚动的两个盒子 -->
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!-- 商品详情头部 -->
+                <div class="detail-head">
+                    <div class="pic"><img src="images/ds1.jpg" alt=""></div>
+                    <p class='title'>小米(MI) 小米电视4A L32M5-AZ 32英寸 全高清 智能语音网络液晶电视</p>
+                    <div class='info'>
+                        <div class="price">当前最低：¥<span>798.00</span></div>
+                        <div class="comments">优选评论：<span>9562</span>条</div>
+                    </div>
+                </div>
+                <!-- 比价购买 -->
+                <div class="compare-price">
+                    <div class="tab">
+                        <a href="#" class='active'>比价购买</a>
+                        <a href="#">产品参数</a>
+                        <a href="javascript:;">优选评价</a>
+                    </div>
+                    <div class="tab-con">
+                        <div class="mui-table-view mall-sales">
+                            
+                        </div>
+                        <p class='note'> * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p>
+                    </div>
+                </div>
+                <!-- 网友评价区域 -->
+                <div class="net-comments">
+                    <!-- 标题 -->
+                    <div class="head">网友评价</div>
+                    <!-- 评价列表内容 -->
+                    <ul class="content">
+                        <li>
+                            <div class="user-info">
+                                <span class='name'>t***2</span>
+                                <span class='date'>2018/12/22</span>
+                            </div>
+                            <p class='from'>购买自：京东商城</p>
+                            <p class='text'>买这点事有个插曲！816小米活动 这电视降100 9我打电话给同城小米之家价格是不是9，对方说是的，就2-3台！害我中午跑过去，到店说 还要运费+100
+                                我自提还要收运费？ 和他闹翻了，一气之下走人！果断某东看价格用某卷比他便宜！果断买了!</p>
+                        </li>
+                        <li>
+                            <div class="user-info">
+                                <span class='name'>t***2</span>
+                                <span class='date'>2018/12/22</span>
+                            </div>
+                            <p class='from'>购买自：京东商城</p>
+                            <p class='text'>买这点事有个插曲！816小米活动 这电视降100 9我打电话给同城小米之家价格是不是9，对方说是的，就2-3台！害我中午跑过去，到店说 还要运费+100
+                                我自提还要收运费？ 和他闹翻了，一气之下走人！果断某东看价格用某卷比他便宜！果断买了!</p>
+                        </li>
+                    </ul>
+                    <!-- 更多评价区域 -->
+                    <div class="moreComments">
+                        <button class="mui-btn more">查看更多评价</button>
+                    </div>
+                </div>
+
+                <!-- 为了实现底部一直在主体内容下面随着滚动，只好放到区域滚动的范围里 -->
+                <!-- 底部区域 -->
+                <footer id="footer">
+                    <!-- 底部按钮 -->
+                    <div class="footer-btn">
+                        <a href="#">登录</a>
+                        <a href="#">注册</a>
+                        <a href="javascript:;" class='returnTop'>返回顶部</a>
+                    </div>
+                    <div class="website">
+                        <p><span>手机APP下载</span> 慢慢买手机版 -- 掌上比价平台</p>
+                        <p>m.manmanbuy.com</p>
+                    </div>
+                </footer>
+
+
+            </div>
+        </div>
+    </main>
+
+    
+
+
+
+    <!-- 准备商品详情的模板 -->
+    <script id='getProductTpl' type='text/html'>
+        {{each result value}}
+            <div class="pic">
+                {{@value.productImg}}
+                <!-- <img src="images/ds1.jpg" alt=""> -->
+            </div>
+            <p class='title'>{{value.productName}}</p>
+            <div class='info'>
+                <div class="price">当前最低：¥<span>798.00</span></div>
+                <div class="comments">优选评论：<span>9562</span>条</div>
+            </div>
+        {{/each}}
+    </script>
+
+
+
+    <!-- 准备评价的模板 -->
+    <script id='getProductComTpl' type='text/html'>
+        {{if result.length > 0}}
+            {{each result value}}
+                <li>
+                    <div class="user-info">
+                        <span class='name'>{{value.comName}}</span>
+                        <span class='date'>{{value.comTime}}</span>
+                    </div>
+                    <p class='from'>{{value.comFrom}}</p>
+                    <p class='text'>{{value.comContent}}</p>
+                </li>
+            {{/each}}
+        {{else}}
+            <p style='padding: .1rem;font-size: .14rem'>抱歉，暂无评论🌹</p>
+        {{/if}}
+    </script>
+
+
+
+    <!-- 引入zepto的js文件 -->
+    <script src='lib/zepto/zepto.min.js'></script>
+    <!-- 引入MUI的js文件 -->
+    <script src='lib/mui/js/mui.js'></script>
+    <!-- 引入模板引擎 -->
+    <script src='lib/artTemplate/template-web.js'></script>
+    <!-- 引入自己写的js文件 -->
+    <script src='js/detail.js'></script>
+    <!-- <script src='js/detail副本.js'></script> -->
+</body>
+
+</html>

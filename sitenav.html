@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="less/sitenav.less">
+    <link rel="stylesheet/less" href="less/base.less">
+    <script src="lib/less/less.js"></script>
+    <script src="js/rem.js"></script>
+    <title>Document</title>
+</head>
+
+<body style="background-color: #f1f1f1">
+    <header id="header" class="mui-content sitenavLinkHeader" style="height: 0.44rem;">
+        <div class="mui-row">
+            <div class="mui-col-xs-2 icon-back">
+                <li class="mui-table-view-cell">
+                    <a href="index.html">
+                        <</a> </li> </div> <div class="mui-col-xs-8 header-text">
+                <li class="mui-table-view-cell">
+                    <span>商城导航</span>
+                </li>
+            </div>
+            <div class="mui-col-xs-2 appdown">
+                <li class="mui-table-view-cell">
+                    <a href="##">
+                        <img src="images/header_app.png" alt="手机app下载">
+                    </a>
+                </li>
+            </div>
+        </div>
+    </header>
+    <div id="sitenavLink">
+        <a href="http://union.click.jd.com/jdc?e=
+        p=AiIBZRprFDJWWA1FBCVbV0IUEEULXg1cAAQJS14M…xkSUGZZHkcCaUJQWiUXVyUDIgRUHF8XCxUDVytrc38i
+        t=W1dCFBBFC14NXAAECUteDA%3D%3D">
+            <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt="">
+            <span>京东商城</span>
+        </a>
+    </div>
+    <div id="footnav">
+        <span>
+            <a href="index.html">首页</a>
+            <span >> 商城导航</span>
+        </span>
+    </div>
+
+    <footer class="sitenavFooter">
+        <div class="foot_top">
+            <a href="##">登录</a>
+            <a href="##">注册</a>
+            <a href="#">
+                <img src="images/top.png" alt="">
+                返回顶部
+            </a>
+        </div>
+        <div class="footer">
+            <p>
+                <a href="##">手机app下载</a>
+                <a href="index.html">慢慢买手机版 —— 掌上比价平台</a>
+            </p>
+            <p>mmanmanbuy.com</p>
+        </div>
+    </footer>
+    <script id="sitenavTpl" type="text/html">
+        {{each result value}}
+            <a href="{{value.navHref}}" navid="{{value.navId}}">
+                <img src="{{value.navImg}}" alt="">
+                <span>{{value.navTitle}}</span>
+            </a>
+        {{/each}}
+    </script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/zepto/fx.js"></script>
+    <script src="lib/zepto/fx_methods.js"></script>
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/sitenav.js"></script>
+</body>
+
+</html>
