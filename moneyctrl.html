@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="Ie=edge">
+    <title>Mobile client Moneyctrl</title>
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="less/moneyctrl.less">
+    <script src="lib/less/less.js"></script>
+    <script src="js/rem.js"></script>
+
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="javascript:history.back();" class="mui-icon mui-icon-arrowleft"></a>
+       <span>省钱控 - 最新优惠</span>
+       <a href="#" class="header-right">
+        <img src="images/header_app.png" alt="手机app下载">
+       </a>
+    </header>
+    <!-- 主体区域 -->
+    <main id="main">
+        <!-- mui的下拉刷新(区域滚动)的父容器-->
+            <div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+                <!-- mui的下拉刷新(区域滚动)的子容器 -->
+                    <div class="mui-scroll">
+                              <!-- 模板的容器名:goods-list -->
+                            <ul class="mui-table-view goods-list">
+                                <li class="mui-table-view-cell mui-media">
+                                    <a href="javascript:;" class="product-main">
+                                        <div class="product-left">
+                                            <img class="mui-media-object mui-pull-left product-img" src="./images/jiangyou.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
+                                        </div>
+                                        <div class="mui-media-body product-right">
+                                            <div class="product-message">
+                                                <span class="product-name">移动端凑单品：海天 鲜味 生抽 1.28L</span>
+                                                <span class="product-price">10.9元</span>
+                                            </div>  
+                                            <div class="text-jd">
+                                                <div class="text-jd-left">
+                                                    京东商城 | <span>10-25 14:10</span>
+                                                </div>
+                                                <div class="text-jd-right">
+                                                    <p class="comments">有1人评论</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>                              
+                            </ul>
+                    </div>
+            </div>
+    </main>
+
+    <!-- 底部区域 -->
+<footer id="footer">
+    <div class="foot-top">
+        <a href="login.html">登录</a>
+        <a href="##">注册</a>
+        <a href="index.html">首页</a>
+    </div>
+    <div class="foot-bottom">
+        <p class="phone">
+            <a href="#">手机APP下载</a>
+            <a href="index.htm" tppabs="#">慢慢买手机版 -- 掌上比价平台</a>
+        </p>
+        <p class="foot-com">m.manmanbuy.com</p>
+    </div>
+</footer>
+
+<script id="moneyCtrlTpl" type="text/html">
+    {{each result value index}}
+    <li class="mui-table-view-cell mui-media">
+            <a href="#" class="product-main" data-id="{{value.productId}}">
+                <div class="product-left mui-media-object mui-pull-left">
+                    {{@value.productImgSm}}
+                </div>
+                <div class="mui-media-body product-right">
+                    <div class="product-message">
+                        <span class="product-name">{{value.productName}}</span>
+                        <span class="product-price">{{value.productPinkage}}</span>
+                    </div>  
+                    <div class="text-jd">
+                        <div class="text-jd-left">
+                            {{value.productFrom}} | <span>{{value.productTime}}</span>
+                        </div>
+                        <div class="text-jd-right">
+                            <p class="comments">{{value.productComCount}}</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+    </li>
+    {{/each}}             
+</script>
+
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/moneyctrl.js"></script>
+</body>
+
+</html>
