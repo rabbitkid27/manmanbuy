@@ -1,0 +1,160 @@
+/* 定义变量 */
+/*********************************************初始化样式区域***************************************/
+/*去掉所有边距*/
+* {
+  padding: 0;
+  margin: 0;
+}
+/*去掉小圆点*/
+li {
+  list-style: none;
+}
+/* 解决图标3px的问题 */
+img {
+  vertical-align: middle;
+}
+/*a的样式*/
+a {
+  color: #fff;
+}
+body {
+  font-size: 0.14rem;
+}
+p {
+  margin-bottom: 0;
+}
+/*********************************************以下公共样式区域***************************************/
+/*******************首页的公共样式区域**********************/
+/*******************省钱控的公共样式区域**********************/
+body {
+  padding: 0.50rem 0;
+  height: 100vh;
+  font-size: .14rem;
+}
+#header {
+  background: #ff4e49;
+  width: 100vw;
+  display: flex;
+  padding-left: .45rem;
+  padding-right: .45rem;
+  height: .45rem;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-sizing: border-box;
+}
+#header span {
+  font-weight: 700;
+  font-size: 20px;
+  width: 2.85rem;
+  text-align: center;
+  line-height: .45rem;
+}
+#header a {
+  width: .45rem;
+  height: .45rem;
+  line-height: .45rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  color: #fff;
+}
+#header a:first-of-type {
+  font-size: .3rem;
+  left: 0;
+}
+#header a:last-of-type {
+  right: 0;
+}
+#header a img {
+  width: .34rem;
+  height: .34rem;
+}
+#main {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+}
+#main .mui-media {
+  margin: 0 0 15px 0;
+  height: 1.28rem;
+}
+#main .mui-media .product-main {
+  height: 1.28rem;
+  overflow: visible;
+}
+#main .mui-media .product-main .product-left img {
+  height: 0.85rem;
+  max-width: 0.85rem;
+  display: block;
+  margin: 0 auto;
+}
+#main .mui-media .product-main .product-right {
+  padding-left: .55rem;
+}
+#main .mui-media .product-main .product-right .product-message {
+  width: 100%;
+  min-height: .6rem;
+  white-space: normal;
+}
+#main .mui-media .product-main .product-right .product-message .product-name {
+  color: #333;
+  font-size: .15rem;
+}
+#main .mui-media .product-main .product-right .product-message .product-price {
+  color: #ff6c00;
+}
+#main .mui-media .product-main .product-right .text-jd {
+  display: flex;
+  justify-content: space-between;
+  width: 2.45rem;
+}
+#main .mui-media .product-main .product-right .text-jd .text-jd-left {
+  color: #a1a1a1;
+  font-size: .12rem;
+}
+#main .mui-media .product-main .product-right .text-jd .text-jd-right .comments {
+  position: absolute;
+  right: .1rem;
+}
+#footer {
+  width: 100vw;
+  height: .96rem;
+  position: fixed;
+  background: #232a34;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  text-align: center;
+}
+#footer .foot-top {
+  display: flex;
+  height: .34rem;
+  line-height: .34rem;
+}
+#footer .foot-top > a {
+  border: 1px solid #727272;
+  display: block;
+  width: 30vw;
+}
+#footer .foot-top > a:last-of-type {
+  width: 40vw;
+}
+#footer .foot-bottom {
+  padding-top: .15rem;
+}
+#footer .foot-bottom .phone {
+  font-size: .12rem;
+}
+#footer .foot-bottom .phone > a:first-of-type {
+  color: #ff4e49;
+}
+#footer .foot-bottom .phone > a:last-of-type {
+  color: #bebebe;
+}
+#footer .foot-bottom .foot-com {
+  font-size: .12rem;
+  margin-top: -0.06rem;
+}
