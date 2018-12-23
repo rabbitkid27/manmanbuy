@@ -18,6 +18,7 @@
     <!-- 引入rem.js屏幕适配的JS代码 -->
     <script src="js/rem.js"></script>
 
+
 </head>
 <body>
 
@@ -36,13 +37,42 @@
     </div>
 </header>
 
-
+<!--搜索表单-->
+<div id="searchForm">
+    <input type="text" placeholder="请输入搜索的商品名称" class="input-search">
+    <button type="button" class="btn-search">搜索</button>
+</div>
 
 <!-- 主体区域 -->
 <main id="main">
 
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
 
-    
+
+            <!--这里放置真实显示的DOM内容-->
+            <div class="brand-nav">
+                <a href="javascript:void (0);">首页</a>
+                <span>&gt;</span>
+                <a href="javascript:void (0);">品牌大全</a>
+            </div>
+            <div class="brand-title">
+                热门品牌排行
+            </div>
+            <div class="brand-content">
+                <ul class="mui-table-view brand-content-ul">
+
+
+                </ul>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
 </main>
 
 
@@ -61,7 +91,7 @@
                 </a>
             </li>
             <li>
-                <a href="javascript:void (0);">
+                <a href="javascript:void (0);" class="backTop">
                     <img src="images/top.png" alt="">
                     返回顶部
                 </a>
@@ -76,6 +106,18 @@
         <p>m.manmanbuy.com</p>
     </div>
 </footer>
+
+<!--生成一级标题模板-->
+<script id="brand-one-Tpl" type="text/html">
+
+    {{ each result value }}
+    <li class="mui-table-view-cell  brand-one">
+        <a class="mui-navigate-right titleOne" href="javascript:void (0);" data-id="{{ value.brandTitleId }}">{{value.brandTitle}}</a>
+    </li>
+    {{ /each }}
+</script>
+
+
 
 
 <!-- 引入zepto的JS 发送请求之类的 和 获取元素 添加事件之类 -->
