@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表页</title>
+
+    <!-- 引入字体文件 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入MUI的css文件 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入自己写的样式文件 -->
+    <link rel="stylesheet/less" href="less/productList.less">
+    <!-- 引入less编译器 -->
+    <script src='lib/less/less.js'></script>
+    <!-- 引入自适应的rem.js 文件 -->
+    <script src='js/rem.js'></script>
+
+</head>
+
+<body>
+
+    <!-- 头部区域样式 -->
+    <header id='header'>
+        <a href="index.html" class="logo" title='慢慢买'>
+            <img src="images/header_logo.png" alt="">
+        </a>
+        <a href="#" class="appdown">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </header>
+    <!-- 搜索区域 -->
+    <div id="search">
+        <form action="#">
+            <input type="search" class='input-search' placeholder='请输入你想比价的商品'>
+            <button type='button' class='btn-search'>搜索</button>
+        </form>
+    </div>
+
+    <!-- 导航区 -->
+    <nav id="nav">
+        <div class='nav-link'>
+            <a href="index.html">首页 ></a>
+            <a href="category.html">全部分类 ></a>
+            <a href="javascript:;" class='active'><span>电视</span> ></a>
+        </div>
+        <button type="button" class="mui-btn btn-priceSort fa fa-arrow-down" data-sort='down'>价格</button>
+    </nav>
+
+    <!-- 主体区域 -->
+    <main id="main" class='clearfix'>
+        <!-- 为下拉刷新添加的父盒子 -->
+        <div class="mui-scroll-wrapper" id='refreshContainer'>
+            <!-- 为下拉刷新添加的子盒子 -->
+            <div class="mui-scroll">
+                <!-- 内容 -->
+                <ul class="mui-table-view product-list">
+                    <li class="mui-table-view-cell mui-media">
+                        <a href="javascript:;">
+                            <!-- 商品左侧 -->
+                            <div class="mui-pull-left left">
+                                <img class="mui-media-object" src="images/ds1.jpg">
+                            </div>
+                            <!-- 商品右侧 -->
+                            <div class="mui-media-body right">
+                                <!-- 标题 -->
+                                <div class="title">乐视TV S50 Air全配版2D 50英寸全高清LED液晶电视</div>
+                                <!-- 价格区 -->
+                                <div class='price-wrap'>
+                                    <div class="price">¥<span>1999.00</span> </div>
+                                    <div class='star'>
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                    </div>
+                                </div>
+                                <!-- 信息（报价与评论） -->
+                                <div class='info'>
+                                    <div class="offer"><span>6</span>商城报价</div>
+                                    <div class="comments">有<span>2286</span>人评论</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mui-table-view-cell mui-media">
+                        <a href="javascript:;">
+                            <!-- 商品左侧 -->
+                            <div class="mui-pull-left left">
+                                <img class="mui-media-object" src="images/ds1.jpg">
+                            </div>
+                            <!-- 商品右侧 -->
+                            <div class="mui-media-body right">
+                                <!-- 标题 -->
+                                <div class="title">乐视TV S50 Air全配版2D 50英寸全高清LED液晶电视</div>
+                                <!-- 价格区 -->
+                                <div class='price-wrap'>
+                                    <div class="price">¥<span>1999.00</span> </div>
+                                    <div class='star'>
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                    </div>
+                                </div>
+                                <!-- 信息（报价与评论） -->
+                                <div class='info'>
+                                    <div class="offer"><span>6</span>商城报价</div>
+                                    <div class="comments">有<span>2286</span>人评论</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                
+
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <!-- 底部按钮 -->
+        <div class="footer-btn">
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+            <a href="#" class='returnTop'>返回顶部</a>
+        </div>
+        <div class="website">
+            <p><span>手机APP下载</span> 慢慢买手机版 -- 掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+
+
+
+    <!-- 准备商品列表的模板 -->
+    <script id='getProductListTpl' type='text/html'>
+        {{each result value}}
+            <li class="mui-table-view-cell mui-media" data-id='{{value.productId}}' data-brand='{{value.brandName}}'>
+                <a href="javascript:;">
+                    <!-- 商品左侧 -->
+                    <div class="mui-pull-left left">
+                        {{@value.productImg}}
+                        <!-- <img class="mui-media-object" src="images/ds1.jpg"> -->
+                    </div>
+                    <!-- 商品右侧 -->
+                    <div class="mui-media-body right">
+                        <!-- 标题 -->
+                        <div class="title">{{value.productName}}</div>
+                        <!-- 价格区 -->
+                        <div class='price-wrap'>
+                            <div class="price">¥ <span>{{value.productPrice}}</span> </div>
+                            <div class='star'>
+                                <img src="images/star.svg" alt="">
+                                <img src="images/star.svg" alt="">
+                                <img src="images/star.svg" alt="">
+                                <img src="images/star.svg" alt="">
+                                <img src="images/star.svg" alt="">
+                            </div>
+                        </div>
+                        <!-- 信息（报价与评论） -->
+                        <div class='info'>
+                            <div class="offer">{{value.productQuote}}</div>
+                            <div class="comments">{{value.productCom}}</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+
+
+
+
+    <!-- 引入zepto的js文件 -->
+    <script src='lib/zepto/zepto.min.js'></script>
+    <!-- 引入MUI的js文件 -->
+    <script src='lib/mui/js/mui.js'></script>
+    <!-- 引入模板引擎 -->
+    <script src='lib/artTemplate/template-web.js'></script>
+    <!-- 引入自己写的js文件 -->
+    <script src='js/productList.js'></script>
+    <!-- <script src='js/productList的副本.js'></script> -->
+</body>
+
+</html>
