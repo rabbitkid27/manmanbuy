@@ -1,0 +1,359 @@
+//引入文件
+@import "base";
+
+//------------------样式区域--------------------//
+
+//body样式
+body {
+  padding: 1.00rem 0 0.98rem 0;
+  height: 100vh;
+  background-color: #fff;
+
+}
+
+//头部样式
+#header {
+  width: 100vw;
+  height: 0.50rem;
+  background-color: @main-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.10rem;
+
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 0.01rem solid #e6e6e6;
+  z-index: 999;
+
+  .logo {
+    a {
+      img {
+        width: 1.85rem;
+        height: 0.25rem;
+      }
+    }
+  }
+
+  .appdown {
+    a {
+      img {
+        width: 0.34rem;
+        height: 0.34rem;
+      }
+    }
+  }
+}
+
+//搜索表单
+#searchForm {
+  width: 100vw;
+  height: 0.50rem;
+  line-height: 0.50rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.10rem;
+  border-bottom: 0.01rem solid #cccccc;
+  background-color: #fff;
+
+  position: fixed;
+  top: 0.50rem;
+  left: 0;
+  z-index: 999;
+
+
+  .input-search {
+    margin: 0;
+    padding: 0;
+    height: 0.30rem;
+    line-height: 0.30rem;
+    padding-left: 0.20rem;
+    border-radius: 0.30rem;
+    border: none;
+    background-color: #eeeeee;
+    margin-right: 0.10rem;
+    color: #cccccc;
+    font-size: 0.14rem;
+  }
+
+  .btn-search {
+    width: 0.63rem;
+    height: 0.30rem;
+    border-radius: 0.54rem;
+    background-color: #565656;
+    color: #ffffff;
+    border: none;
+  }
+}
+
+
+//主体样式
+#main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .brand-content1 {
+    .brand-title {
+      height: 0.43rem;
+      line-height: 0.43rem;
+      background-color: #f3f3f3;
+      padding-left: 0.10rem;
+
+      p {
+        color: #874604;
+        font-size: 0.16rem;
+        font-weight: bold;
+      }
+    }
+
+    .brand-sortlist {
+      .brand-box {
+        display: flex;
+
+        i {
+          width: 0.20rem;
+          height: 0.20rem;
+          line-height: 0.20rem;
+          text-align: center;
+          background-color: #c9c9c9;
+          color: #ffffff;
+
+          &.red {
+            background-color: #f10e0e;
+          }
+
+          &.yellow {
+            background-color: #ff9314;
+          }
+
+          &.green {
+            background-color: #8adf5b;
+          }
+        }
+
+        .inner {
+          padding: 0 0.10rem;
+
+          .brand-name {
+            font-size: 0.18rem;
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+
+  .brand-content2 {
+    .brand-title {
+      height: 0.43rem;
+      line-height: 0.43rem;
+      background-color: #f3f3f3;
+      padding-left: 0.10rem;
+
+
+      p {
+        color: #874604;
+        font-size: 0.16rem;
+        font-weight: bold;
+      }
+    }
+
+    .prolist {
+      ul {
+        li {
+          padding: 0.10rem;
+          height: 1.30rem;
+          border-bottom: 1px solid #cccccc;
+
+          a {
+
+            display: flex;
+
+            .pic {
+              img {
+                width: 1.00rem;
+              }
+            }
+
+            .shop_content {
+              padding: 0.10rem;
+
+              .title {
+                font-size: 0.14rem;
+                color: #333333;
+              }
+
+              .price {
+                font-size: 0.18rem;
+                color: #ea3900;
+                line-height: 0.22rem;
+              }
+
+              .other {
+                color: #666666;
+
+                span:nth-of-type(1) {
+                  padding-right: 0.10rem;
+                }
+              }
+
+              span {
+                img {
+                  width: 0.18rem;
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  .brand-content3 {
+    .brand-title {
+      height: 0.43rem;
+      line-height: 0.43rem;
+      background-color: #f3f3f3;
+      padding-left: 0.10rem;
+
+
+      p {
+        color: #874604;
+        font-size: 0.16rem;
+        font-weight: bold;
+      }
+    }
+
+    .prolist {
+      ul {
+        li {
+          padding: 0.10rem;
+          //height: 1.30rem;
+          border-bottom: 1px solid #cccccc;
+
+          a {
+
+            display: flex;
+
+            .pic {
+              img {
+                width: 1.00rem;
+              }
+            }
+
+            .shop_content {
+              padding: 0.10rem;
+
+              .title {
+                font-size: 0.14rem;
+                color: #333333;
+              }
+
+
+            }
+
+          }
+          .productcom{
+            background: #f8f8f8;
+            padding: 10px;
+            border: 1px solid #e7e7e7;
+
+            .productcom-title{
+              position: relative;
+              margin-bottom: 0.10rem;
+              .name{
+                color: #4f6900;
+              }
+              .star{
+                img{
+                  width: 0.18rem;
+                }
+              }
+              .time{
+                position: absolute;
+                right: 0;
+              }
+
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+}
+
+//底部样式
+#footer {
+  width: 100vw;
+  height: 0.98rem;
+  background-color: #232a34;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+
+  .footerBar {
+    height: 0.34rem;
+    border-bottom: 0.01rem solid #ffffff;
+
+    ul {
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        height: 100%;
+        border-right: 0.01rem solid #ffffff;
+
+        a {
+          height: 100%;
+          line-height: 0.34rem;
+          display: block;
+          text-align: center;
+        }
+
+        &:nth-of-type(1) {
+          flex: 1;
+        }
+
+        &:nth-of-type(2) {
+          flex: 1;
+        }
+
+        &:nth-of-type(3) {
+          width: 1.50rem;
+          border-right: none;
+
+          img {
+            margin-top: -0.03rem;
+            margin-right: 0.05rem;
+          }
+        }
+      }
+
+    }
+  }
+
+  .footerLink {
+    text-align: center;
+    padding: 0.15rem 0;
+
+    .footerLink-tip {
+      color: @main-color;
+      font-weight: bold;
+    }
+  }
+
+}
+
+
+
+
+

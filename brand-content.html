@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>品牌大全</title>
+
+    <!-- 引入MUI的CSS文件 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入字体图标fontawsome字体图标库的CSS文件 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入搜索的less文件 注意 stylesheet/less-->
+    <link rel="stylesheet/less" href="less/brand-content.less">
+    <!-- 引入less.js的编译器文件 编译less代码 要编译index.less 依赖index.less  影响页面渲染优先执行 -->
+    <script src="lib/less/less.js"></script>
+    <!-- 引入rem.js屏幕适配的JS代码 -->
+    <script src="js/rem.js"></script>
+
+</head>
+<body>
+
+
+<!-- 头部区域 -->
+<header id="header">
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/header_logo.png" alt="">
+        </a>
+    </div>
+    <div class="appdown">
+        <a href="javascript:void (0);">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+
+<!--搜索表单-->
+<div id="searchForm">
+    <input type="text" placeholder="请输入搜索的商品名称" class="input-search">
+    <button type="button" class="btn-search">搜索</button>
+</div>
+
+<!-- 主体区域 -->
+<main id="main">
+
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+
+
+            <!--这里放置真实显示的DOM内容-->
+            <!--排行-->
+            <div class="brand-content1">
+                <div class="brand-title">
+                    <p>十大品牌排行</p>
+                </div>
+                <div class="brand-sortlist">
+                    <ul class="mui-table-view brand-ul">
+                        <li class="mui-table-view-cell">
+                            <a class="mui-navigate-right">
+                                <div class="brand-box">
+                                    <i>1</i>
+                                    <div class="inner">
+                                        <p class="brand-name">小米平板电视</p>
+                                        <p class="brand-num">30天全网销量：2496058件</p>
+
+
+                                    </div>
+                                </div>
+
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <a class="mui-navigate-right">
+                                <div class="brand-box">
+                                    <i>1</i>
+                                    <div class="inner">
+                                        <p class="brand-name">小米平板电视</p>
+                                        <p class="brand-num">30天全网销量：2496058件</p>
+
+
+                                    </div>
+                                </div>
+
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <a class="mui-navigate-right">
+                                <div class="brand-box">
+                                    <i>1</i>
+                                    <div class="inner">
+                                        <p class="brand-name">小米平板电视</p>
+                                        <p class="brand-num">30天全网销量：2496058件</p>
+
+
+                                    </div>
+                                </div>
+
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!--销量排行-->
+
+            <div class="brand-content2">
+                <div class="brand-title">
+                    <p>产品销量排行</p>
+                </div>
+                <div class="prolist">
+                    <ul>
+
+                        <li>
+                            <a href="javascript:void (0);">
+                                <div class="pic">
+                                    <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png">
+                                </div>
+
+                                <div class="shop_content">
+                                    <p class="title">乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</p>
+                                    <p class="price">￥1999.00
+                                        <span>
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                        </span>
+                                    </p>
+
+                                    <div class="other">
+                                        <span>报价(6)</span>
+                                        <span>评论(2286)</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!--用户评论-->
+            <div class="brand-content3">
+                <div class="brand-title">
+                    <p>最有用的用户评论</p>
+                </div>
+                <div class="prolist">
+                    <ul class="conUl">
+                        <li>
+                            <a href="javascript:void (0);">
+                                <div class="pic">
+                                    <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png">
+                                </div>
+
+                                <div class="shop_content">
+                                    <p class="title">乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</p>
+                                </div>
+                            </a>
+                            <div class="productcom">
+                                <div class="productcom-title">
+                                    <span class="name">xxxx:</span>
+                                    <span class="star">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                    </span>
+                                    <span class="time">2018/1/2</span>
+                                </div>
+                                <div class="con">
+                                    哎哟不错哟
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void (0);">
+                                <div class="pic">
+                                    <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png">
+                                </div>
+
+                                <div class="shop_content">
+                                    <p class="title">乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</p>
+                                </div>
+                            </a>
+                            <div class="productcom">
+                                <div class="productcom-title">
+                                    <span class="name">xxxx:</span>
+                                    <span class="star">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                    </span>
+                                    <span class="time">2018/1/2</span>
+                                </div>
+                                <div class="con">
+                                    哎哟不错哟
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void (0);">
+                                <div class="pic">
+                                    <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png">
+                                </div>
+
+                                <div class="shop_content">
+                                    <p class="title">乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</p>
+                                </div>
+                            </a>
+                            <div class="productcom">
+                                <div class="productcom-title">
+                                    <span class="name">xxxx:</span>
+                                    <span class="star">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                    </span>
+                                    <span class="time">2018/1/2</span>
+                                </div>
+                                <div class="con">
+                                    哎哟不错哟
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+</main>
+
+
+<!-- 底部区域 -->
+<footer id="footer">
+    <div class="footerBar">
+        <ul>
+            <li>
+                <a href="javascript:void (0);">
+                    登录
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void (0);">
+                    注册
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void (0);" class="backTop">
+                    <img src="images/top.png" alt="">
+                    返回顶部
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footerLink">
+        <p>
+            <a href="javascript:void (0);" class="footerLink-tip">手机APP下载</a>
+            <a href="javascript:void (0);">慢慢买手机版 -- 掌上比价平台</a>
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+
+<!--模版-->
+<!--十大品牌排行-->
+<script id="brandContentTpl" type="text/html">
+
+    {{ each result value index}}
+    <li class="mui-table-view-cell">
+        <a class="mui-navigate-right">
+            <div class="brand-box">
+
+                {{ if index+1==1 }}
+                <i class="red">{{index+1}}</i>
+                {{ else if index+1==2 }}
+                <i class="yellow">{{index+1}}</i>
+                {{ else if index+1==3 }}
+                <i class="green">{{index+1}}</i>
+                {{ else }}
+                <i>{{index+1}}</i>
+                {{ /if }}
+
+
+                <div class="inner">
+                    <p class="brand-name">{{ value.brandName }}</p>
+                    <p class="brand-num">{{ value.brandInfo }}</p>
+
+
+                </div>
+            </div>
+
+        </a>
+    </li>
+    {{ /each }}
+</script>
+<!--销量排行-->
+<script id="brandProductlistTpl" type="text/html">
+
+    {{ each result value }}
+    <li>
+        <a href="javascript:void (0);">
+            <div class="pic">
+                {{@value.productImg}}
+
+            </div>
+
+            <div class="shop_content">
+                <p class="title">{{value.productName}}</p>
+                <p class="price">{{value.productPrice}}
+                    <span>
+                       <img src="images/star.svg" alt="">
+                       <img src="images/star.svg" alt="">
+                       <img src="images/star.svg" alt="">
+                       <img src="images/star.svg" alt="">
+                       <img src="images/star.svg" alt="">
+                    </span>
+                </p>
+
+                <div class="other">
+                    <span>报价({{value.productPrice}})</span>
+                    <span>评论({{value.productCom}})</span>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{ /each }}
+
+</script>
+<!--评论-->
+<script id="productComTpl" type="text/html">
+
+    {{ each result value }}
+    <li>
+        <a href="javascript:void (0);">
+            <div class="pic">
+                {{@productObj.productImg}}
+            </div>
+
+            <div class="shop_content">
+                <p class="title">{{productObj.productName}}</p>
+            </div>
+        </a>
+        <div class="productcom">
+            <div class="productcom-title">
+                <span class="name">{{value.comName}}:</span>
+                <span class="star">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                        <img src="images/star.svg" alt="">
+                                    </span>
+                <span class="time">{{value.comTime}}</span>
+            </div>
+            <div class="con">
+                {{value.comContent}}
+            </div>
+
+        </div>
+    </li>
+    {{ /each }}
+
+</script>
+
+
+
+<!-- 引入zepto的JS 发送请求之类的 和 获取元素 添加事件之类 -->
+<script src="lib/zepto/zepto.min.js"></script>
+<!-- 引入MUI的js -->
+<script src="lib/mui/js/mui.js"></script>
+<!-- 引入模板引擎 artTemplate template-web.js最新4.0简洁版本-->
+<script src="lib/artTemplate/template-web.js"></script>
+<!-- 引入首页自己的JS包 自己的代码放在最后面 -->
+<script src="js/brand-content.js"></script>
+</body>
+</html>
