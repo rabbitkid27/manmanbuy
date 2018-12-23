@@ -1,0 +1,125 @@
+/* 定义变量 */
+/*********************************************初始化样式区域***************************************/
+/*去掉所有边距*/
+* {
+  padding: 0;
+  margin: 0;
+  touch-action: none;
+}
+/*去掉小圆点*/
+li {
+  list-style: none;
+}
+/* 解决图标3px的问题 */
+img {
+  vertical-align: middle;
+}
+/*a的样式*/
+a {
+  color: #fff;
+}
+body {
+  font-size: 0.14rem;
+  background-color: #f7f7f7;
+}
+p {
+  margin-bottom: 0;
+}
+/*********************************************以下公共样式区域***************************************/
+/*******************首页的公共样式区域**********************/
+/*******************省钱控的公共样式区域**********************/
+/*******************白菜价的公共样式区域**********************/
+.backTop {
+  width: .5rem;
+  height: .5rem;
+  font-size: .25rem;
+  position: fixed;
+  bottom: .5rem;
+  right: .5rem;
+  color: red;
+  z-index: 999;
+  border-radius: .5rem;
+  background: rgba(102, 102, 102, 0.3);
+  text-align: center;
+  line-height: .5rem;
+  display: none;
+}
+#header {
+  height: .40rem;
+  width: 100vw;
+  display: flex;
+  position: fixed;
+  background-color: #ff4e49;
+  padding: 0 .4rem;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+#header .fa-arrow-left {
+  height: .4rem;
+  width: .4rem;
+  position: absolute;
+  line-height: .4rem;
+  text-align: center;
+  font-size: 20px;
+  left: 0;
+  top: 0;
+}
+#header .downloadApp {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: .02rem;
+}
+#header .downloadApp img {
+  width: 100%;
+}
+#header h4 {
+  flex: 1;
+  text-align: center;
+  line-height: .3rem;
+  color: #fff;
+  font-weight: normal;
+}
+#footer {
+  height: .96rem;
+  width: 100vw;
+  background-color: #232a34;
+  margin-top: .4rem;
+  position: relative;
+  bottom: 0;
+}
+#footer .linkTo {
+  width: 100vw;
+  height: .34rem;
+}
+#footer .linkTo ul {
+  display: flex;
+  border-bottom: 1px solid #727272;
+}
+#footer .linkTo ul li {
+  width: 33.33%;
+  text-align: center;
+  line-height: .34rem;
+  box-sizing: border-box;
+  border-left: 1px solid #727272;
+  color: #fff;
+}
+#footer .linkTo ul li:first-child {
+  border-left: none;
+}
+#footer .foot {
+  height: .62rem;
+  width: 100vw;
+  text-align: center;
+  padding: .13rem;
+}
+#footer .foot p {
+  font-size: 12px;
+  line-height: 18px;
+}
+#footer .foot p a {
+  color: #ff4e49;
+}
